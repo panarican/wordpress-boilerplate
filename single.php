@@ -24,7 +24,7 @@
 
 
 <?php echo get_date_format('sample_date'); ?>
-Quick test to see if this git hook works v3!!!!
+Quick test to see if this git hook works v4!!!!
 <div class="post">
 	<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	<div class="post-details">
