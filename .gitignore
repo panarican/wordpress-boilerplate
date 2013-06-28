@@ -1,7 +1,6 @@
 **.sass-cache/*
 /desktop.ini
 /node_modules
-/node_modules
 
 # Disabling this by default will free to change if conflicts occur
 #/assets/js/libs/modules
