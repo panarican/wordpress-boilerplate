@@ -1,0 +1,45 @@
+// 
+// Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+$black:                 #000 !default;
+$blackLight:			lighten($black, 10%) !default;
+$gray:                  lighten($black, 20%) !default;
+$grayLight:				lighten($black, 30%) !default;
+$grayLighter:           #e1e1e1 !default;
+$white:                 #fff !default;
+
+// Accent colors
+// -------------------------
+$blue:                  #006e8f !default;
+$green:                 #d5e14d !default;
+
+$red: 					#bf2e1b !default;
+$redDark:               darken($red, 10%) !default;
+
+$yellow:                #FFA500 !default;
+$orange:                #FF7518 !default;
+$pink:                  #E671B8 !default;
+$purple:                #9954BB !default;
+
+
+// Links
+// -------------------------
+$linkColor:             $red !default;
+$linkColorHover:        $redDark !default;
+
+
+// Typography
+// -------------------------
+
+$sansFontFamily:  Helvetica, sans-serif !default;
+//$sansFontFamilyBold: 'SourceSansProBold', sans-serif !default;
+$serifFontFamily: 'Times New Roman', serif !default;
+//$serifFontFamilyBold: 'CrimsonSemiboldItalic', serif !default;

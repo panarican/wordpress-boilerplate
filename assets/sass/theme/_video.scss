@@ -1,0 +1,9 @@
+// Video
+// -----------------------------------------------------
+
+.post-video {
+    @include translateZ(0);
+    .video-chapters {
+        @extend .clearfix;
+    }
+}

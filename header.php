@@ -1,27 +1,17 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
-<html lang='en'> 
-	<head> 
-	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/reset.css" type="text/css"> 
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css"> 
-	<!--[if IE]>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/ie.css" type="text/css" />
-	<![endif]-->
-	</head> 
-	<body class="home blog">
-	<div id="top-bar-tile">
-		<div id="top-bar-content">
-			<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-			<span class="slogan"><?php bloginfo('description'); ?></span>
-			<div id="search-box">
-				<form method="get" id="searchform" action="" > 
-					<input type="text" value="Search..." onfocus="if(this.value == this.defaultValue) this.value = ''" name="s" id="s" /> 
-				</form>
-			</div><!-- search-box -->
-		</div><!-- top-bar-content -->
-	</div><!-- top-bar-tile -->
-	<div id="nav-bar-tile">
-			 <?php wp_nav_menu(array( 'menu' => 'mainnav', 'menu_class' => 'nav-bar-content', 'menu_id' => 'navigation', 'container' => false, 'theme_location' => 'primary-menu', 'show_home' => '1')); ?>
-	</div><!-- nav-bar-tile -->
-	<div id="wrapper">
-		<div id="content">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+        <!--[if lt IE 9]>
+        <script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/media.match.min.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/html5shiv.js"></script>
+        <![endif]-->
+	<link href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css" rel="stylesheet">
+</head>
+<body>

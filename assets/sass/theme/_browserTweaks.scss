@@ -1,0 +1,46 @@
+// BROWSER TWEAKS
+// -----------------------------------------------------
+
+// remove horizontal scrollbars on body element
+body {
+	overflow-x: hidden;
+}
+
+
+// fixes input elements to have border-box great for percentages
+* {
+    @include box-sizing(border-box);
+}
+
+// set tranisition to all links and btns form fields
+a , .btn, button, input, select, textarea {
+    @include transition(all 0.5s ease-in-out);
+}
+
+// remove annoying dotted outline on links and form elements
+* {
+    outline: 0;
+}
+
+/* IE 10 Overrides */
+
+// removes annoying x on inputs
+*::-ms-clear {
+    display: none;
+}
+
+// fix scrollbar overlap
+body {
+    -ms-overflow-style: scrollbar !important;
+}
+
+/* Mobile Overrides */
+// remove ugly highlight color
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// disable user select on all items except form elements
+*:not(input):not(textarea):not(select) {
+    @include user-select(none);
+}

@@ -1,8 +1,5 @@
-<div class="spacer"></div>
-			
-			<div id="footer">
-				Test site by <a href="http://www.panarican.com">Panarican</a><br />
-			</div>
-			
-		</div><!-- content -->
-<?php get_sidebar(); ?>
+<footer></footer><!-- / footer -->
+<!-- require js -->
+<script data-main="<?php echo get_template_directory_uri(); ?>/assets/js/main.min" src="<?php echo get_template_directory_uri(); ?>/assets/js/require.js"></script>
+</body>
+</html>

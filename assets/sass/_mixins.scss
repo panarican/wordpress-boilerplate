@@ -1,0 +1,122 @@
+
+/* user-select */
+@mixin user-select($select) {
+  $select: unquote($select);
+  @include experimental(user-select, $select, -moz, -webkit, not -o, not -ms, -khtml, official); }
+
+/* placeholder */
+@mixin placeholder($color) {
+    ::-webkit-input-placeholder {
+        color: $color;
+    }
+    :-moz-placeholder {
+        /* Firefox 18- */
+        color: $color;
+    }
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $color;
+    }
+    :-ms-input-placeholder {
+        color: $color;
+    }
+}
+
+/* media queries vars */
+$tablet: 768px !default;
+$phone: 360px !default;
+$retina: 2 !default;
+
+/* isDesktop */
+@mixin isDesktop {
+	@media screen and (min-width: ($tablet+1)) {
+        @content;
+    }	
+}
+
+/* isMobile */
+@mixin isMobile {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+/* isTablet */
+@mixin isTablet {
+    @media screen and (max-width: $tablet) and (min-width: ($phone+1)) {
+        @content;
+    }
+}
+
+/* isPhone */
+@mixin isPhone {
+    @media screen and (max-width: $phone) {
+        @content;
+    }
+}
+
+/* isPhone Landscape 
+
+There's a bug with android when you bring up keyboard on portrait it renders as landscape
+Below are sample fixes:
+//@media screen and (min-aspect-ratio: 13/9){ } // landscape
+//@media screen and (max-aspect-ratio: 13/9){ } // portrait
+*/
+
+
+@mixin isPhoneLandscape {
+	@media screen and (max-width: ($tablet - 1)) and (min-aspect-ratio: 13/9)  {
+        @content;
+    }
+}
+
+/* isRetina */
+@mixin isRetina {
+	@media (-webkit-min-device-pixel-ratio: $retina), (min-resolution: #{$retina*96}dpi) {
+		@content;
+	}
+}
+
+/* custom media queries */
+
+@mixin isWidth($res-min, $res-max)
+{
+  @media screen and ( min-width: $res-min ) and ( max-width: $res-max ) {
+    @content;
+  }
+}
+
+@mixin isMaxWidth($res)
+{
+  @media screen and ( max-width: $res ) {
+    @content;
+  }
+}
+
+@mixin isMinWidth($res)
+{
+  @media screen and ( min-width: $res ) {
+    @content;
+  }
+}
+
+@mixin isHeight($res-min, $res-max)
+{
+  @media screen and ( min-height: $res-min ) and ( max-height: $res-max ) {
+    @content;
+  }
+}
+
+@mixin isMaxHeight($res)
+{
+  @media screen and ( max-height: $res ) {
+    @content;
+  }
+}
+
+@mixin isMinHeight($res)
+{
+  @media screen and ( min-height: $res ) {
+    @content;
+  }
+}
