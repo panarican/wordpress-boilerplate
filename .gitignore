@@ -3,13 +3,13 @@
 /node_modules
 /node_modules
 
-/assets/js/modules
-/assets/js/main.min.js
-/assets/css
-/assets/img
+# Disabling this by default will free to change if conflicts occur
+#/assets/js/libs/modules
+#/assets/js/main.min.js
+#/assets/css
+#/assets/img
 
 *.sublime-project
 *.sublime-workspace
 /.sass-cache
-/assets/js/libs/modules
 *.scssc
