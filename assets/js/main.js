@@ -1,7 +1,7 @@
 // Created by Efrain Lugo
 
 requirejs.config({
-    baseUrl: "/wp-content/themes/cso/assets/js/libs",
+    baseUrl: "/wp-content/themes/wordpress-boilerplate/assets/js/libs",
     paths: {
         "jquery": "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min",
         "jquery.migrate": "//code.jquery.com/jquery-migrate-1.2.1",
