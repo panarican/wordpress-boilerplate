@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
 <?php if ( ! have_posts() ) : ?>
+
+arghhhhhh hopefully it works this time lol!
+
 		<h1>Not Found</h1>
 			<p>Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post</p>
 <?php endif; ?>
