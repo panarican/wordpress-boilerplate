@@ -27,8 +27,7 @@ require(["modernizr",
         "jquery.history",
         "consoleFix",
         "modules/enquireHelper",
-        "modules/externalLinks",
-        "modules/mainPlayer"
+        "modules/externalLinks"
 ]);
 
 // conditionally require these files
