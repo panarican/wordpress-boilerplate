@@ -8,7 +8,8 @@
 <?php while ( have_posts() ) : the_post();
 	
 	pre_meta();
-
+	$categories = get_the_category();
+	
  ?>
 
 <div class="post">
