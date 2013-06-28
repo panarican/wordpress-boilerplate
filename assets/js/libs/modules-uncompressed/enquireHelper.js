@@ -20,26 +20,10 @@ define(['jquery', 'enquire.min'], function($){
         match: function() {
           options.selector.addClass("isMobile");
           
-          // swap bg
-          var $bg = $('[data-phone]'); 
-              $bg.each(function(){
-                 var $this = $(this),
-                      _img = $this.data('phone');
-                  if(_img && _img != "hide") $this.css('background-image', 'url('+_img+')');
-              });
-
         },
         unmatch: function() {
           options.selector.removeClass("isMobile");
           
-          // swap bg
-          var $bg = $('[data-desktop]');
-              $bg.each(function(){
-                 var $this = $(this),
-                      _img = $this.data('desktop');
-                  if(_img && _img != "hide") $this.css('background-image', 'url('+_img+')');
-              });
-
         }
       });
 

@@ -28,7 +28,6 @@ require(["modernizr",
         "consoleFix",
         "modules/enquireHelper",
         "modules/externalLinks",
-        "modules/cookieStorage",
         "modules/mainPlayer"
 ]);
 
