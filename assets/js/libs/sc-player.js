@@ -842,7 +842,7 @@ $.scPlayer.updateTrackWidth = function(){
     },
     // initialization, when dom is ready
     onDomReady  : function() {
-      $('a.sc-player, div.sc-player').scPlayer();
+      $('a.sc-player, div.sc-player').not('.main-player').scPlayer();
     },
     autoPlay: false,
     continuePlayback: true,

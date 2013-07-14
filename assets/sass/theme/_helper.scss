@@ -82,8 +82,10 @@
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -103,5 +105,74 @@
  * Floating
  *
  */
-.floatleft {float: left;}
-.floatright {float: right;}
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+/* 16:9 Radio */
+
+.ratio-16-9 {
+    @include aspect-ratio(56.25%);
+    /* ie brigtcove video fix */
+    span {
+        @include aspect-ratio(56.25%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        &:before {
+            margin-top: -56.25% !important;
+            padding-top: 0 !important;
+        }
+    }
+}
+
+/* 4:3 Radio */
+
+.ratio-4-3 {
+    @include aspect-ratio(75%);
+    /* ie brigtcove video fix */
+    span {
+        @include aspect-ratio(75%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        &:before {
+            margin-top: -75% !important;
+            padding-top: 0 !important;
+        }
+    }
+}
+
+/* Breakpoint Helpers */
+
+.breakpoint-large,
+.breakpoint-small,
+.breakpoint-mobile {
+    display: none;
+}
+
+@include isLarge {
+    .breakpoint-large {
+        display: block !important;
+    }
+}
+
+
+@include isSmall {
+    .breakpoint-small {
+        display: block !important;
+    }
+}
+
+
+@include isMobile {
+    .breakpoint-mobile {
+        display: block !important;
+    }
+}

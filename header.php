@@ -8,10 +8,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-        <!--[if lt IE 9]>
-        <script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/media.match.min.js"></script>
-        <script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/html5shiv.js"></script>
+        <link href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css" rel="stylesheet">
+        <!--[if lt IE 10]>
+        <script src="<?php echo get_template_directory_uri(); ?>/assets/js/libs/matchMedia.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/assets/js/libs/matchMedia.addListener.js"></script>
         <![endif]-->
-	<link href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <script src="<?php echo get_template_directory_uri(); ?>/assets/js/libs/respond.min.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/assets/js/libs/html5shiv.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/assets/js/libs/selectivizr-min.js"></script>
+        <![endif]-->
+    <?php wp_head(); ?>
 </head>
 <body>

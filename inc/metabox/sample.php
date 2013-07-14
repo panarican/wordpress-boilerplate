@@ -186,6 +186,6 @@ $fields = array(
  * var $page string|array post type to add meta box to
  * var $js bool including javascript or not
  */
-$sample_box = new custom_add_meta_box( 'sample_box', 'Sample Box', $fields, array('post','portfolio'), true );
+$sample = new custom_add_meta_box( 'sample', 'Sample Box', $fields, array('post','portfolio'), true );
 
 ?>

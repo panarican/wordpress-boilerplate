@@ -2,11 +2,59 @@
 // -----------------------------------------------------
 
 body {
-	font-family: $sansFontFamily;
-	color: $gray;
+    font-family: $sansFontFamily;
+    line-height: $baseLineheight;
+    color: $gray;
+}
+
+strong, b {
+    font-family: $serifFontFamilyBold;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
-	font-family: $serifFontFamily;
+    font-weight: normal;
+    margin: $typeSpacing 0 $typeSpacing 0;
+    font-family: $serifFontFamily;
+}
+
+h1 {
+    font-size: 43px;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4, h5, h6 {
+    font-size: 14px;
+}
+
+/* you can extend this in sass */
+.sans-heading {
+    font-family: $sansFontFamily;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: $red;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* */
+
+p {
+    margin: 0;
+    padding-bottom: $typeSpacing;
+}
+
+ul {
+    line-height: $baseLineheight;
 }

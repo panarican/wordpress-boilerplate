@@ -22,10 +22,39 @@
     }
 }
 
+
+/* Aspect Ratio */
+@mixin aspect-ratio($percent) {
+        position: relative;
+        width: 100%;     /* desired width */
+        &:before{
+            content: "";
+            display: block;
+            padding-top: $percent;  /*  ratio */
+        }
+        & > object, & > video, & > embed, & > img, & > div, & > iframe, & > span {
+            display: block;
+            width: 100% !important;
+            height: 100% !important;
+            position:  absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+}
+
+
+
 /* media queries vars */
+$desktopMin: 980px !default;
 $tablet: 768px !default;
 $phone: 360px !default;
 $retina: 2 !default;
+
+$isLarge: $desktopMin + 1 !default;
+$isSmall: $tablet + 1;
+
 
 /* isDesktop */
 @mixin isDesktop {
@@ -34,12 +63,6 @@ $retina: 2 !default;
     }	
 }
 
-/* isMobile */
-@mixin isMobile {
-    @media screen and (max-width: $tablet) {
-        @content;
-    }
-}
 
 /* isTablet */
 @mixin isTablet {
@@ -54,6 +77,29 @@ $retina: 2 !default;
         @content;
     }
 }
+
+/* isLarge */
+
+@mixin isLarge {
+  @include isMinWidth( $isLarge ) {
+    @content;
+  }
+}
+
+/* isSmall */
+@mixin isSmall {
+  @include isWidth($isSmall, $desktopMin ) {
+    @content;
+  }  
+}
+
+/* isMobile */
+@mixin isMobile {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
 
 /* isPhone Landscape 
 

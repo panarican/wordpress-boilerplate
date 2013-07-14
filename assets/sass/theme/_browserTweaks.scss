@@ -1,14 +1,18 @@
 // BROWSER TWEAKS
 // -----------------------------------------------------
 
-// remove horizontal scrollbars on body element
-body {
-	overflow-x: hidden;
+// optimize legibility of fonts
+* {
+    text-rendering: optimizeLegibility !important;
 }
 
+// remove horizontal scrollbars on body element
+body {
+    overflow-x: hidden;
+}
 
 // fixes input elements to have border-box great for percentages
-* {
+* , *:before , *:after {
     @include box-sizing(border-box);
 }
 
@@ -41,6 +45,8 @@ body {
 }
 
 // disable user select on all items except form elements
-*:not(input):not(textarea):not(select) {
-    @include user-select(none);
+.touch {
+    *:not(input):not(textarea):not(select):not(object):not(embed):not(iframe):not(video):not(audio) {
+        @include user-select(none);
+    }
 }

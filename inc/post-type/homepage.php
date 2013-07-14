@@ -11,13 +11,13 @@ function register_cpt_homepage() {
         'singular_name' => _x( 'homepage', 'homepage' ),
         'add_new' => _x( 'Add New', 'homepage' ),
         'add_new_item' => _x( 'Add New homepage', 'homepage' ),
-        'edit_item' => _x( 'Edit homepage', 'homepage' ),
-        'new_item' => _x( 'New homepage', 'homepage' ),
-        'view_item' => _x( 'View homepage', 'homepage' ),
+        'edit_item' => _x( 'Edit Homepage', 'homepage' ),
+        'new_item' => _x( 'New Homepage', 'homepage' ),
+        'view_item' => _x( 'View Homepage', 'homepage' ),
         'search_items' => _x( 'Search Homepage', 'homepage' ),
-        'not_found' => _x( 'No homepage found', 'homepage' ),
-        'not_found_in_trash' => _x( 'No homepage found in Trash', 'homepage' ),
-        'parent_item_colon' => _x( 'Parent homepage:', 'homepage' ),
+        'not_found' => _x( 'No Homepage found', 'homepage' ),
+        'not_found_in_trash' => _x( 'No Homepage found in Trash', 'homepage' ),
+        'parent_item_colon' => _x( 'Parent Homepage:', 'homepage' ),
         'menu_name' => _x( 'Homepage', 'homepage' ),
     );
 
@@ -25,12 +25,11 @@ function register_cpt_homepage() {
         'labels' => $labels,
         'hierarchical' => false,
         
-        'supports' => array( 'title', 'editor' ),
+        'supports' => array( '' ),
         
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => false,
-        
         
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,
@@ -43,6 +42,7 @@ function register_cpt_homepage() {
     );
 
     register_post_type( 'homepage', $args );
+
 }
 
 function register_cpt_homepage_link() {
@@ -53,14 +53,13 @@ function register_cpt_homepage_link() {
         // if we have homepage post, show the edit link else the add homepage link
         if ( $homepage->have_posts() ) {
             $homepage->the_post();
-            $link = get_edit_post_link( get_the_ID(), 'return' );
-            $title = 'Edit Home Page';
+            $link = 'post.php?post=' . get_the_ID() . '&action=edit';
+            $title = 'Edit Homepage';
         } else {
             // in case if the user has deleted the default post
-            $link = get_bloginfo( 'url' ). '/wp-admin/post-new.php?post_type=homepage';
-            $title = 'Add Home Page';
+            $link = 'post-new.php?post_type=homepage';
+            $title = 'Add Homepage';
         }
 
-
-    add_menu_page( 'Homepage', $title, 'edit_posts', $link, '', '', 6  );
+    add_menu_page( 'Homepage', $title, 'edit_posts', $link, '', '', 7);
 }

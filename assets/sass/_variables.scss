@@ -11,8 +11,8 @@
 // -------------------------
 $black:                 #000 !default;
 $blackLight:			lighten($black, 10%) !default;
-$gray:                  lighten($black, 20%) !default;
-$grayLight:				lighten($black, 30%) !default;
+$gray:                  #555 !default;
+$grayLight:				#b7b7b7 !default;
 $grayLighter:           #e1e1e1 !default;
 $white:                 #fff !default;
 
@@ -38,8 +38,9 @@ $linkColorHover:        $redDark !default;
 
 // Typography
 // -------------------------
-
-$sansFontFamily:  Helvetica, sans-serif !default;
-//$sansFontFamilyBold: 'SourceSansProBold', sans-serif !default;
-$serifFontFamily: 'Times New Roman', serif !default;
-//$serifFontFamilyBold: 'CrimsonSemiboldItalic', serif !default;
+$typeSpacing: 25px !default;
+$baseLineheight: 1.4;
+$sansFontFamily:  'SourceSansProRegular', sans-serif !default;
+$sansFontFamilyBold: 'SourceSansProBold', sans-serif !default;
+$serifFontFamily: 'CrimsonItalic', sans-serif !default;
+$serifFontFamilyBold: 'CrimsonSemiboldItalic', sans-serif !default;
