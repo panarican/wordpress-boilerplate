@@ -8,7 +8,7 @@ Wordpress boilerplate was created to make building themes faster and smarter. I 
 Donate
 ------
 Like Wordpress Boilerplate?
-Please Donate Here: ![](http://i.imgur.com/2tqfhMO.png?1)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q8SZJQDLXXMB4)
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q8SZJQDLXXMB4" target="_blank">Please Donate Here</a>
 
 Requirements
 -------------------------
