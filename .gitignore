@@ -11,4 +11,5 @@
 *.sublime-project
 *.sublime-workspace
 /.sass-cache
+/.idea
 *.scssc
